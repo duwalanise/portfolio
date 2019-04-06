@@ -1,0 +1,24 @@
+.nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  top: 50px;
+  right: 50px;
+  z-index: 10;
+  .nav-item {
+    flex: 1;
+    align-items: flex-end;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    will-change: transform;
+    margin: 10px;
+    background: #dedede;
+    border: 5px solid white;
+    &:hover {
+      box-shadow: 0px 3px 10px -1px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
