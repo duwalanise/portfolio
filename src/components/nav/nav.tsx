@@ -8,8 +8,8 @@ interface NavProps {
   onClick: (idx: number) => void;
 }
 const calc = (x: number, y: number) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
+  -(y - window.innerHeight / 2) / 40,
+  (x - window.innerWidth / 2) / 40,
   1.1
 ];
 const trans = (x: number, y: number, s: number) =>
@@ -21,7 +21,7 @@ const Nav: React.FunctionComponent<NavProps> = ({ pages, onClick }) => {
       {pages.map((page, idx) => {
         const [props, set] = useSpring(() => ({
           xys: [0, 0, 1],
-          config: { mass: 5, tension: 350, friction: 40 }
+          config: { mass: 1, tension: 350, friction: 40 }
         }));
         return (
           <animated.div

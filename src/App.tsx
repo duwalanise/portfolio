@@ -7,7 +7,7 @@ import Nav from "./components/nav/nav";
 
 interface AppProps {}
 
-const pages = ["Namaste", "Anish", "Duwal"];
+const pages = ["Namaste", "Portfolio", "Contact"];
 
 const App: React.FunctionComponent<AppProps> = ({}) => {
   const [index, setIndex] = useState(0);
