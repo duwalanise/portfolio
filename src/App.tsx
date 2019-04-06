@@ -8,14 +8,27 @@ interface AppProps {}
 
 const pages = [
   ({ style }: { style: any }) => (
-    <animated.div style={{ ...style, background: "lightpink" }}>A</animated.div>
+    <animated.div
+      className="page"
+      style={{ ...style, background: "lightpink" }}
+    >
+      Namaste
+    </animated.div>
   ),
   ({ style }: { style: any }) => (
-    <animated.div style={{ ...style, background: "lightblue" }}>B</animated.div>
+    <animated.div
+      className="page"
+      style={{ ...style, background: "lightblue" }}
+    >
+      Anish
+    </animated.div>
   ),
   ({ style }: { style: any }) => (
-    <animated.div style={{ ...style, background: "lightgreen" }}>
-      C
+    <animated.div
+      className="page"
+      style={{ ...style, background: "lightgreen" }}
+    >
+      Duwal
     </animated.div>
   )
 ];
@@ -29,7 +42,10 @@ const App: React.FunctionComponent<AppProps> = ({}) => {
     leave: { opacity: 0, transform: "translate3d(-50%,0,0)" }
   });
   return (
-    <div className="wrapper" onClick={onClick}>
+    <div className="wrapper">
+      <div className="nav" onClick={onClick}>
+        Menu
+      </div>
       {transitions.map(({ item, props, key }) => {
         const Page = pages[item];
         return <Page key={key} style={props} />;
