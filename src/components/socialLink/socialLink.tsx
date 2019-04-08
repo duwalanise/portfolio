@@ -30,15 +30,15 @@ const SocialLink: React.FunctionComponent<SocialLinkProps> = () => {
       />
       <FaLinkedin
         className="sl-item linkedin"
-        onClick={openProfile(profile.github)}
+        onClick={openProfile(profile.linkedin)}
       />
       <FaStackOverflow
         className="sl-item stack"
-        onClick={openProfile(profile.github)}
+        onClick={openProfile(profile.stcakoverflow)}
       />
       <FaTwitter
         className="sl-item twitter"
-        onClick={openProfile(profile.github)}
+        onClick={openProfile(profile.twitter)}
       />
     </div>
   );
