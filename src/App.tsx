@@ -8,7 +8,16 @@ import SocialLink from "./components/socialLink/socialLink";
 
 interface AppProps {}
 
-const pages = ["Namaste", "Portfolio", "Contact"];
+export interface pageProps {
+  title: string;
+  component: any;
+}
+
+const pages: pageProps[] = [
+  { title: "About Me", component: "Anish Duwal" },
+  { title: "Portfolio", component: "My Portfolio" },
+  { title: "Contact", component: "See U Soon" }
+];
 
 const App: React.FunctionComponent<AppProps> = ({}) => {
   const [index, setIndex] = useState(0);
@@ -24,7 +33,7 @@ const App: React.FunctionComponent<AppProps> = ({}) => {
       {transitions.map(({ item, props, key }) => {
         return (
           <Page key={key} style={props}>
-            {pages[item]}
+            {pages[item].component}
           </Page>
         );
       })}

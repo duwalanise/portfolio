@@ -1,10 +1,12 @@
 import * as React from "react";
 import { useSpring, animated } from "react-spring";
 
+import { pageProps } from "../../App";
+
 import "./nav.scss";
 
 interface NavProps {
-  pages: string[];
+  pages: pageProps[];
   onClick: (idx: number) => void;
 }
 const calc = (x: number, y: number) => [
@@ -33,7 +35,7 @@ const Nav: React.FunctionComponent<NavProps> = ({ pages, onClick }) => {
             className="nav-item"
             onClick={() => onClick(idx)}
           >
-            {page}
+            {page.title}
           </animated.div>
         );
       })}
