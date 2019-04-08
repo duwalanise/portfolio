@@ -1,9 +1,10 @@
 import * as React from "react";
 import { useTransition } from "react-spring";
-
 import { useState, useCallback } from "react";
-import Page from "./components/page/page";
+
 import Nav from "./components/nav/nav";
+import Page from "./components/page/page";
+import SocialLink from "./components/socialLink/socialLink";
 
 interface AppProps {}
 
@@ -27,6 +28,7 @@ const App: React.FunctionComponent<AppProps> = ({}) => {
           </Page>
         );
       })}
+      <SocialLink />
     </div>
   );
 };
